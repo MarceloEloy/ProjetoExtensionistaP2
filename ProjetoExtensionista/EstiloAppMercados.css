@@ -1,0 +1,71 @@
+body{
+    width: auto;
+    height: auto;
+    margin:0;
+}
+#cabecalho{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .3s;
+    background-color: red;
+    width: 100%;
+    height: 100px;
+}
+#cbc{
+    width: 100%;
+    height: 100px;
+}
+.opcoesUsuario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: blue;
+    height: 50%;
+    width: 250px;
+}
+#ProdutosEnvelope{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+#Envelope1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: bisque;
+}
+#Envelope2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    background-color: aqua;
+}
+#moldeAnuncio{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    
+}
+#moldeAnuncio:hover{
+
+    cursor: pointer;
+    transform: scale(1.1);
+
+    
+}
