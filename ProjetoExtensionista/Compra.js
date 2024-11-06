@@ -193,6 +193,54 @@ if(url.includes('file:///C:/Users/marco/Desktop/ProjetoExtensionista/ItemsSoda.h
         window.alert("Falha ao adicionar item")
     }
 })}
+if(url.includes('file:///C:/Users/marco/Desktop/ProjetoExtensionista/ItemsAgua.html')){
+    // LEMBRAR DE TROCAR O URL NA MAQUINA DA FACULDADE
+    var Agua = document.getElementById("BotaoAgua");
+    localStorage = window.localStorage
+     Agua.addEventListener("click", () => {
+    const lojaAgua1 = document.getElementById("lojaAgua1")
+    const lojaAgua2 = document.getElementById("lojaAgua2")
+    const lojaAgua3 = document.getElementById("lojaAgua3")
+    const lojaAgua4 = document.getElementById("lojaAgua4")
+    const lojaAgua5 = document.getElementById("lojaAgua5")
+    const quantidadeAgua = document.getElementById("quantidadeAgua").value
+    if(lojaAgua1.checked){
+        console.log(lojaAgua1.value)
+        localStorage.setItem("valorAgua", lojaAgua1.value)
+    }
+    if(lojaAgua2.checked){
+        console.log(lojaAgua2.value)
+        localStorage.setItem("valorAgua", lojaAgua2.value)
+    }
+    if(lojaAgua3.checked){
+        console.log(lojaAgua3.value)
+        localStorage.setItem("valorAgua", lojaAgua3.value)
+    }
+    if(lojaAgua4.checked){
+        console.log(lojaAgua4.value)
+        localStorage.setItem("valorAgua", lojaAgua4.value)
+    }
+    if(lojaAgua5.checked){
+        console.log(lojaAgua5.value)
+        localStorage.setItem("valorAgua", lojaAgua5.value)
+    }
+    if(localStorage.getItem("valorAgua") == null){
+        window.alert("erro ao realizar compra")
+        localStorage.setItem("valorAgua", 0)
+    }
+    if(quantidadeAgua != ""){
+        const JAgua = {
+            item: "Agua",
+            valor: localStorage.getItem("valorAgua"),
+            quantidade: quantidadeAgua
+        };
+        localStorage.setItem("Agua", JSON.stringify(JAgua))
+        
+    }
+    else{
+        window.alert("Falha ao adicionar item")
+    }
+})}
 if(url.includes('file:///C:/Users/marco/Desktop/ProjetoExtensionista/ItemsPao.html')){
     // LEMBRAR DE TROCAR O URL NA MAQUINA DA FACULDADE
     var Pao = document.getElementById("BotaoPao");
@@ -251,8 +299,9 @@ if(url.includes('file:///C:/Users/marco/Desktop/ProjetoExtensionista/ItemsPao.ht
             var morango = JSON.parse(localStorage.getItem("Morango"))
             var batata = JSON.parse(localStorage.getItem("Batata"))
             var soda = JSON.parse(localStorage.getItem("Soda"))
+            var agua = JSON.parse(localStorage.getItem("Agua"))
             var pao = JSON.parse(localStorage.getItem("Pao"))
-            listaItems = [chocolate, batata, morango, soda, pao]
+            listaItems = [chocolate, batata, morango, soda, pao, agua]
             const lista1 = document.getElementById("lista1")
             const lista2 = document.getElementById("lista2")
             const lista3 = document.getElementById("lista3")
