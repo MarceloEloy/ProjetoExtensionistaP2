@@ -3,14 +3,29 @@ body{
     height: auto;
     margin:0;
 }
+ul{
+    font-size: 30px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#linksCb{
+    text-decoration: none;
+}
 #cabecalho{
+    border-bottom: #838383 3px solid;
     position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    transition: .3s;
-    background-color: red;
+    background-color: rgb(201, 201, 201);
     width: 100%;
     height: 100px;
 }
@@ -24,15 +39,25 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: blue;
+    background-color: #d7d7d7;
+    color: #585858;
     height: 50%;
     width: 250px;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.opcoesUsuario:hover{
+    color: blue;
+    transform: scale(1.1);
 }
 #ProdutosEnvelope{
     display: flex;
     flex-direction: row;
     width: 100%;
     height: auto;
+    justify-content: space-evenly;
+
 }
 #Envelope1{
     display: flex;
@@ -41,7 +66,6 @@ body{
     align-items: center;
     width: 50%;
     height: 100%;
-    background-color: bisque;
 }
 #Envelope2{
     display: flex;
@@ -50,7 +74,6 @@ body{
     width: 50%;
     height: 100%;
     align-items: center;
-    background-color: aqua;
 }
 #moldeAnuncio{
     background-color: black;
@@ -60,12 +83,113 @@ body{
     transition-duration: .3s;
     transition-timing-function: ease;
     transition-delay: 0s;
-    
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 #moldeAnuncio:hover{
 
     cursor: pointer;
     transform: scale(1.1);
-
-    
+}
+#corpoConclusao{
+    width: 100%;
+    height: auto;
+}
+#mostrar1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#mostrar2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#mostrar3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#BotaoConc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 50%;
+}
+#PBotaoConc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+#BotaoConclusao{
+    height: 100%;
+    width: 50%;
+    border-radius: 30px;
+    background-color: rgba(148, 148, 148, 0.89);
+    transition: 0.3s;
+}
+#BotaoConclusao:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    background-color: rgba(176, 255, 97, 0.89);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+#EnvelopeCompra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+#Compra1{
+    height: auto;
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Compra2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 15%;
+    height: auto;
+}
+#Compra3{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 15%;
+    height: auto;
+}
+#resultado_compra{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#BotaoCompraConfirmar{
+    height: 50px;
+    width: 10%;
+    border-radius: 30px;
+    background-color: rgba(176, 255, 97, 0.89);
+    transition: 0.3s;
+}
+#BotaoCompraConfirmar{
+    display: none;
+    height: 50px;
+    width: 10%;
+    border-radius: 30px;
+    background-color: rgba(176, 255, 97, 0.89);
+    transition: 0.3s;
+}
+#BotaoCompraConfirmar:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    background-color: rgba(176, 255, 97, 0.89);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }

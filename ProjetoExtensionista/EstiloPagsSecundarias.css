@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+}
+#ImagemProduto{
+    background-image: url(./Imagens/Banners/ChocolateBg.png);
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#ImagemProduto2{
+    background-image: url(./Imagens/Banners/BatataBG.png);
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#ImagemProduto3{
+    background-image: url(./Imagens/Banners/MorangoBG.jpg);
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#ImagemProduto4{
+    background-image: url(./Imagens/Banners/SodaBG.jfif);
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#ImagemProduto5{
+    background-image: url(./Imagens/Banners/PaoBG.jpg);
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Envelope{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#loja{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25%;
+    border: 5px solid red;
+    border-radius: 50px;
+}
+#BotaoBatata{
+    height: 50px;
+    width: 10%;
+    border-radius: 30px;
+    background-color: rgba(148, 148, 148, 0.89);
+    transition: 0.3s;
+}
+#BotaoChocolate{
+    height: 50px;
+    width: 10%;
+    border-radius: 30px;
+    background-color: rgba(148, 148, 148, 0.89);
+    transition: 0.3s;
+}
+#BotaoMorango{
+    height: 50px;
+    width: 10%;
+    border-radius: 30px;
+    background-color: rgba(148, 148, 148, 0.89);
+    transition: 0.3s;
+}
+#BotaoPao{
+    height: 50px;
+    width: 10%;
+    border-radius: 30px;
+    background-color: rgba(148, 148, 148, 0.89);
+    transition: 0.3s;
+}
+#BotaoSoda{
+    height: 50px;
+    width: 10%;
+    border-radius: 30px;
+    background-color: rgba(148, 148, 148, 0.89);
+    transition: 0.3s;
+}
+#BotaoBatata:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    background-color: rgba(176, 255, 97, 0.89);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+#BotaoChocolate:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    background-color: rgba(176, 255, 97, 0.89);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+#BotaoMorango:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    background-color: rgba(176, 255, 97, 0.89);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+#BotaoPao:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    background-color: rgba(176, 255, 97, 0.89);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+#BotaoSoda:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    background-color: rgba(176, 255, 97, 0.89);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+
