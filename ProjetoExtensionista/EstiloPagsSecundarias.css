@@ -1,6 +1,13 @@
 body{
     margin: 0;
 }
+a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
 #ImagemProduto{
     background-image: url(./Imagens/Banners/ChocolateBg.png);
     width: 100%;
@@ -79,35 +86,42 @@ body{
 }
 #BotaoBatata{
     height: 50px;
-    width: 10%;
+    width: 150px;
     border-radius: 30px;
     background-color: rgba(148, 148, 148, 0.89);
     transition: 0.3s;
 }
 #BotaoChocolate{
     height: 50px;
-    width: 10%;
+    width: 150px;
     border-radius: 30px;
     background-color: rgba(148, 148, 148, 0.89);
     transition: 0.3s;
 }
 #BotaoMorango{
     height: 50px;
-    width: 10%;
+    width: 150px;
+    border-radius: 30px;
+    background-color: rgba(148, 148, 148, 0.89);
+    transition: 0.3s;
+}
+#BotaoAgua{
+    height: 50px;
+    width: 150px;
     border-radius: 30px;
     background-color: rgba(148, 148, 148, 0.89);
     transition: 0.3s;
 }
 #BotaoPao{
     height: 50px;
-    width: 10%;
+    width: 150px;
     border-radius: 30px;
     background-color: rgba(148, 148, 148, 0.89);
     transition: 0.3s;
 }
 #BotaoSoda{
     height: 50px;
-    width: 10%;
+    width: 150px;
     border-radius: 30px;
     background-color: rgba(148, 148, 148, 0.89);
     transition: 0.3s;
@@ -130,6 +144,12 @@ body{
     background-color: rgba(176, 255, 97, 0.89);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
+#BotaoAgua:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    background-color: rgba(176, 255, 97, 0.89);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
 #BotaoPao:hover{
     cursor: pointer;
     transform: translateY(-3px);
@@ -142,5 +162,11 @@ body{
     background-color: rgba(176, 255, 97, 0.89);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-
+#Bagua{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 

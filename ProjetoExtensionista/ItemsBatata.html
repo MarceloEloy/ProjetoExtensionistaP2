@@ -31,10 +31,57 @@
     </div><br>
     <input id="quantidadeBatata" placeholder="Quantidade" type="number">
     <br>
-    <input id="BotaoBatata" value="Confirmar" type="button">
+    <a href="ProjetoAppMercados.html"><input id="BotaoBatata" value="Confirmar" type="button"></a>
 </div>
 <hr>
 </div>
-    <script src="Compra.js" defer></script>
+    <script>
+        var Batata = document.getElementById("BotaoBatata");
+        localStorage = window.localStorage
+         Batata.addEventListener("click", () => {
+        const lojaBatata1 = document.getElementById("lojaBatata1")
+        const lojaBatata2 = document.getElementById("lojaBatata2")
+        const lojaBatata3 = document.getElementById("lojaBatata3")
+        const lojaBatata4 = document.getElementById("lojaBatata4")
+        const lojaBatata5 = document.getElementById("lojaBatata5")
+        const quantidadeBatata = document.getElementById("quantidadeBatata").value
+        if(lojaBatata1.checked){
+            console.log(lojaBatata1.value)
+            localStorage.setItem("valorBatata", lojaBatata1.value)
+        }
+        if(lojaBatata2.checked){
+            console.log(lojaBatata2.value)
+            localStorage.setItem("valorBatata", lojaBatata2.value)
+        }
+        if(lojaBatata3.checked){
+            console.log(lojaBatata3.value)
+            localStorage.setItem("valorBatata", lojaBatata3.value)
+        }
+        if(lojaBatata4.checked){
+            console.log(lojaBatata4.value)
+            localStorage.setItem("valorBatata", lojaBatata4.value)
+        }
+        if(lojaBatata5.checked){
+            console.log(lojaBatata5.value)
+            localStorage.setItem("valorBatata", lojaBatata5.value)
+        }
+        if(localStorage.getItem("valorBatata") == null){
+            window.alert("erro ao realizar compra")
+            localStorage.setItem("valorBatata", 0)
+        }
+        if(quantidadeBatata != ""){
+            const JBatata = {
+                item: "Batata",
+                valor: localStorage.getItem("valorBatata"),
+                quantidade: quantidadeBatata
+            };
+            localStorage.setItem("Batata", JSON.stringify(JBatata))
+            
+        }
+        else{
+            window.alert("Falha ao adicionar item")
+        }
+})
+    </script>
 </body>
 </html>

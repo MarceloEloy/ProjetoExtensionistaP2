@@ -31,10 +31,57 @@
     </div><br>
     <input id="quantidadePao" placeholder="Quantidade" type="number">
     <br>
-    <input id="BotaoPao" value="Confirmar" type="button">
+    <a href="ProjetoAppMercados.html"><input id="BotaoPao" value="Confirmar" type="button"></a>
 </div>
 <hr>
 </div>
-    <script src="Compra.js" defer></script>
+    <script>
+         var Pao = document.getElementById("BotaoPao");
+    localStorage = window.localStorage
+     Pao.addEventListener("click", () => {
+    const lojaPao1 = document.getElementById("lojaPao1")
+    const lojaPao2 = document.getElementById("lojaPao2")
+    const lojaPao3 = document.getElementById("lojaPao3")
+    const lojaPao4 = document.getElementById("lojaPao4")
+    const lojaPao5 = document.getElementById("lojaPao5")
+    const quantidadePao = document.getElementById("quantidadePao").value
+    if(lojaPao1.checked){
+        console.log(lojaPao1.value)
+        localStorage.setItem("valorPao", lojaPao1.value)
+    }
+    if(lojaPao2.checked){
+        console.log(lojaPao2.value)
+        localStorage.setItem("valorPao", lojaPao2.value)
+    }
+    if(lojaPao3.checked){
+        console.log(lojaPao3.value)
+        localStorage.setItem("valorPao", lojaPao3.value)
+    }
+    if(lojaPao4.checked){
+        console.log(lojaPao4.value)
+        localStorage.setItem("valorPao", lojaPao4.value)
+    }
+    if(lojaPao5.checked){
+        console.log(lojaPao5.value)
+        localStorage.setItem("valorPao", lojaPao5.value)
+    }
+    if(localStorage.getItem("valorPao") == null){
+        window.alert("erro ao realizar compra")
+        localStorage.setItem("valorPao", 0)
+    }
+    if(quantidadePao != ""){
+        const JPao = {
+            item: "Pao",
+            valor: localStorage.getItem("valorPao"),
+            quantidade: quantidadePao
+        };
+        localStorage.setItem("Pao", JSON.stringify(JPao))
+        
+    }
+    else{
+        window.alert("Falha ao adicionar item")
+    }
+})
+    </script>
 </body>
 </html>

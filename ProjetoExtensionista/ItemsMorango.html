@@ -31,10 +31,57 @@
     </div><br><br>
     <input id="quantidadeMorango" placeholder="Quantidade" type="number">
     <br>
-    <input id="BotaoMorango" value="Confirmar" type="button">
+    <a href="ProjetoAppMercados.html"><input id="BotaoMorango" value="Confirmar" type="button"></a>
 </div>
 <hr>
 </div>
-    <script src="Compra.js"></script>
+    <script>
+         var Morango = document.getElementById("BotaoMorango");
+    localStorage = window.localStorage
+     Morango.addEventListener("click", () => {
+    const lojaMorango1 = document.getElementById("lojaMorango1")
+    const lojaMorango2 = document.getElementById("lojaMorango2")
+    const lojaMorango3 = document.getElementById("lojaMorango3")
+    const lojaMorango4 = document.getElementById("lojaMorango4")
+    const lojaMorango5 = document.getElementById("lojaMorango5")
+    const quantidadeMorango = document.getElementById("quantidadeMorango").value
+    if(lojaMorango1.checked){
+        console.log(lojaMorango1.value)
+        localStorage.setItem("valorMorango", lojaMorango1.value)
+    }
+    if(lojaMorango2.checked){
+        console.log(lojaMorango2.value)
+        localStorage.setItem("valorMorango", lojaMorango2.value)
+    }
+    if(lojaMorango3.checked){
+        console.log(lojaMorango3.value)
+        localStorage.setItem("valorMorango", lojaMorango3.value)
+    }
+    if(lojaMorango4.checked){
+        console.log(lojaMorango4.value)
+        localStorage.setItem("valorMorango", lojaMorango4.value)
+    }
+    if(lojaMorango5.checked){
+        console.log(lojaMorango5.value)
+        localStorage.setItem("valorMorango", lojaMorango5.value)
+    }
+    if(localStorage.getItem("valorMorango") == null){
+        window.alert("erro ao realizar compra")
+        localStorage.setItem("valorMorango", 0)
+    }
+    if(quantidadeMorango != ""){
+        const JMorango = {
+            item: "Morango",
+            valor: localStorage.getItem("valorMorango"),
+            quantidade: quantidadeMorango
+        };
+        localStorage.setItem("Morango", JSON.stringify(JMorango))
+        
+    }
+    else{
+        window.alert("Falha ao adicionar item")
+    }
+})
+    </script>
 </body>
 </html>

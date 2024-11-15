@@ -31,10 +31,58 @@
     </div><br>
     <input id="quantidadeChocolate" placeholder="Quantidade" type="number">
     <br>
-    <input id="BotaoChocolate" value="Confirmar" type="button">
+    <a href="ProjetoAppMercados.html"><input id="BotaoChocolate" value="Confirmar" type="button"></a>
 </div>
 <hr>
 </div>
-    <script src="Compra.js" defer></script>
+    <script>
+        var chocolate = document.getElementById("BotaoChocolate");
+        localStorage = window.localStorage
+        chocolate.addEventListener("click", () => {
+            const lojachocolate1 = document.getElementById("lojachocolate1")
+            const lojachocolate2 = document.getElementById("lojachocolate2")
+            const lojachocolate3 = document.getElementById("lojachocolate3")
+            const lojachocolate4 = document.getElementById("lojachocolate4")
+            const lojachocolate5 = document.getElementById("lojachocolate5")
+            const quantidadeChocolate = document.getElementById("quantidadeChocolate").value
+            if(lojachocolate1.checked){
+                console.log(lojachocolate1.value)
+                localStorage.setItem("valorChocolate", lojachocolate1.value)
+            }
+            if(lojachocolate2.checked){
+                console.log(lojachocolate2.value)
+                localStorage.setItem("valorChocolate", lojachocolate2.value)
+            }
+            if(lojachocolate3.checked){
+                console.log(lojachocolate3.value)
+                localStorage.setItem("valorChocolate", lojachocolate3.value)
+            }
+            if(lojachocolate4.checked){
+                console.log(lojachocolate4.value)
+                localStorage.setItem("valorChocolate", lojachocolate4.value)
+            }
+            if(lojachocolate5.checked){
+                console.log(lojachocolate5.value)
+                localStorage.setItem("valorChocolate", lojachocolate5.value)
+            }
+            if(localStorage.getItem("valorChocolate") == null){
+                window.alert("erro ao realizar compra")
+                localStorage.setItem("valorChocolate", 0)
+            }
+            if(quantidadeChocolate != ""){
+                const Jchocolate = {
+                    item: "chocolate",
+                    valor: localStorage.getItem("valorChocolate"),
+                    quantidade: quantidadeChocolate
+                }
+                
+                localStorage.setItem("Chocolate", JSON.stringify(Jchocolate))
+             
+            }
+            else{
+                window.alert("Falha ao adicionar item")
+            }
+        })
+    </script>
 </body>
 </html>

@@ -31,10 +31,57 @@
     </div><br>
     <input id="quantidadeSoda" placeholder="Quantidade" type="number">
     <br>
-    <input id="BotaoSoda" value="Confirmar" type="button">
+    <a href="ProjetoAppMercados.html"><input id="BotaoSoda" value="Confirmar" type="button"></a>
 </div>
 <hr>
 </div>
-    <script src="Compra.js" defer></script>
+    <script>
+        var Soda = document.getElementById("BotaoSoda");
+    localStorage = window.localStorage
+     Soda.addEventListener("click", () => {
+    const lojaSoda1 = document.getElementById("lojaSoda1")
+    const lojaSoda2 = document.getElementById("lojaSoda2")
+    const lojaSoda3 = document.getElementById("lojaSoda3")
+    const lojaSoda4 = document.getElementById("lojaSoda4")
+    const lojaSoda5 = document.getElementById("lojaSoda5")
+    const quantidadeSoda = document.getElementById("quantidadeSoda").value
+    if(lojaSoda1.checked){
+        console.log(lojaSoda1.value)
+        localStorage.setItem("valorSoda", lojaSoda1.value)
+    }
+    if(lojaSoda2.checked){
+        console.log(lojaSoda2.value)
+        localStorage.setItem("valorSoda", lojaSoda2.value)
+    }
+    if(lojaSoda3.checked){
+        console.log(lojaSoda3.value)
+        localStorage.setItem("valorSoda", lojaSoda3.value)
+    }
+    if(lojaSoda4.checked){
+        console.log(lojaSoda4.value)
+        localStorage.setItem("valorSoda", lojaSoda4.value)
+    }
+    if(lojaSoda5.checked){
+        console.log(lojaSoda5.value)
+        localStorage.setItem("valorSoda", lojaSoda5.value)
+    }
+    if(localStorage.getItem("valorSoda") == null){
+        window.alert("erro ao realizar compra")
+        localStorage.setItem("valorSoda", 0)
+    }
+    if(quantidadeSoda != ""){
+        const JSoda = {
+            item: "Soda",
+            valor: localStorage.getItem("valorSoda"),
+            quantidade: quantidadeSoda
+        };
+        localStorage.setItem("Soda", JSON.stringify(JSoda))
+        
+    }
+    else{
+        window.alert("Falha ao adicionar item")
+    }
+})
+    </script>
 </body>
 </html>
